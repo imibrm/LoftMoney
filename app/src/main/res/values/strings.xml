@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">LoftMoney</string>
+    <string name="app_enter">ENTER</string>
+    <string name="toolbar_title">Budget Analysis</string>
     <string name="edittext_name_hint">Title</string>
     <string name="edittext_price_hint">Price</string>
-    <string name="add_button_title">Add</string>
+    <string name="add_button_title">ADD</string>
+    <string name="expenses">EXPENSES</string>
+    <string name="incomes">INCOMES</string>
+    <string name="balance">BALANCE</string>
+    <string name="price_with_currency">%1$s $</string>
 </resources>

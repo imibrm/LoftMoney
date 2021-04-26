@@ -1,16 +1,19 @@
 package com.imibragimov.loftmoney;
 
 public class Item {
+
     private String name;
     private String price;
+    private int position;
 
-    public Item(String name, String price) {
+    public Item(String name, String price, int position) {
         this.name = name;
         this.price = price;
+        this.position = position;
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -18,10 +21,17 @@ public class Item {
     }
 
     public String getPrice() {
-        return this.price;
+        return price;
     }
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+    public void setPosition(int position) {
+        this.position = position;
     }
 }

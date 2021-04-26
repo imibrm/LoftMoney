@@ -1,55 +1,70 @@
 package com.imibragimov.loftmoney;
 
-//import java.util.Collections;
-//import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-import java.util.List;
-import android.content.Context;
-import android.view.LayoutInflater;
+import android.text.SpannableString;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
-    private final LayoutInflater inflater;
-    private final List<Item> items;
+import java.util.ArrayList;
+import java.util.List;
 
-    ItemsAdapter(Context context, List<Item> items) {
-        this.items = items;
-        this.inflater = LayoutInflater.from(context);
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHolder> {
+
+    private final List<Item> itemList = new ArrayList<Item>();
+
+    public void setData(List<Item> Item) {
+        itemList.clear();
+        itemList.addAll(Item);
+        notifyDataSetChanged();
     }
 
-   // public void setItems(List<Item> items) {
-   //     this.items = items;
-   //     notifyDataSetChanged();
-   // }
+
+
+    @NonNull
+    @Override
+    public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View itemView = View.inflate(parent.getContext(), R.layout.item_view, null);
+        return new ItemViewHolder(itemView);
+    }
 
     @Override
-    public ItemsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-    //    Context context = viewGroup.getContext();
-    //    LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.item, parent, false);
-    //    final RecyclerView.ViewHolder viewHolder = new RecyclerView.ViewHolder(view);
-        return new ViewHolder(view);
+    public void onBindViewHolder(@NonNull final ItemViewHolder holder, final int position) {
+        holder.bindItem(itemList.get(position));
     }
-    @Override
-    public void onBindViewHolder(ItemsAdapter.ViewHolder holder, int position) {
-        Item item = items.get(position);
-        holder.nameView.setText(item.getName());
-        holder.priceView.setText(item.getPrice());
-    //    ViewHolder.bind(item);
-    }
+
     @Override
     public int getItemCount() {
-        return items.size();
+        return itemList.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
-        final TextView nameView, priceView;
-        ViewHolder(View view){
-            super(view);
-            nameView = (TextView) view.findViewById(R.id.name);
-            priceView = (TextView) view.findViewById(R.id.price);
+    static class ItemViewHolder extends RecyclerView.ViewHolder {
+
+        private final TextView name;
+        private final TextView price;
+
+        public ItemViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            name = itemView.findViewById(R.id.name_view);
+            price = itemView.findViewById(R.id.price_view);
+        }
+
+        public void bindItem(Item item) {
+            name.setText(item.getName());
+            price.setText(new SpannableString(item.getPrice() + " \u20BD"));
+
+            //price.setText(price.getContext().getResources().getString(R.string.price_with_currency, String.valueOf(item.getPrice())));
+
+            switch (item.getPosition()) {
+                case 0:
+                    price.setTextColor(ContextCompat.getColor(name.getContext(), R.color.colorPrimary));
+                case 1:
+                    price.setTextColor(ContextCompat.getColor(name.getContext(), R.color.AppleGreen));
+            }
         }
     }
 }
