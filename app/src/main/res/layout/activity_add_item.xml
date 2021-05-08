@@ -1,41 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".screens.main.MainActivity">
+
 
     <LinearLayout
-        android:layout_above="@id/add_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_add"
+        android:layout_marginBottom="68dp"
+        android:orientation="vertical"
         android:paddingStart="33dp"
-        android:paddingEnd="104dp"
-        android:layout_marginBottom="61dp"
-        android:orientation="vertical">
+        android:paddingEnd="104dp">
 
-    <EditText
-        android:id="@+id/name_edittext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/edittext_name_hint"/>
 
-    <EditText
-        android:id="@+id/price_edittext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/edittext_price_hint"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/name_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/price_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/add_button"
+        android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_button_title"
-        android:textColor="@color/AppleGreen"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@null"/>
-
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/check_selector"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.04"
+        android:paddingStart="40dp"
+        android:paddingEnd="17dp"
+        android:text="@string/add_button"
+        android:enabled="false"
+        android:textColor="@color/add_button_text_color_selector_expense"
+        android:textSize="14sp" />
 </RelativeLayout>
