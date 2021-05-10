@@ -9,25 +9,44 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.FrameLayout;
 
 import com.imibragimov.loftmoney.AddItemActivity;
 import com.imibragimov.loftmoney.R;
+import com.imibragimov.loftmoney.screens.dashboard.DashboardFragment;
+import com.imibragimov.loftmoney.screens.money.BudgetFragment;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
+
 public class MainActivity extends AppCompatActivity {
 
+    private FrameLayout containerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TabLayout tabLayout = findViewById(R.id.tabs);
-        ViewPager viewPager = findViewById(R.id.viewpager);
+        containerView = findViewById(R.id.container_view);
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.container_view, new DashboardFragment())
+                .commitNow();
+    }
+
+
+    /*@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        TabLayout tabLayout = findViewById(R.id.tab_view);
+        ViewPager viewPager = findViewById(R.id.view_pager);
 
         viewPager.setAdapter(new BudgetPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT));
 
-        FloatingActionButton floatingActionButton = findViewById(R.id.add_new_expense);
+        FloatingActionButton floatingActionButton = findViewById(R.id.add_new_item);
         floatingActionButton.setOnClickListener(v -> {
             final int activeFragmentIndex = viewPager.getCurrentItem();
             Fragment activeFragment = getSupportFragmentManager().getFragments().get(activeFragmentIndex);
@@ -38,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.getTabAt(0).setText(R.string.expenses);
-        tabLayout.getTabAt(1).setText(R.string.income);
+        tabLayout.getTabAt(1).setText(R.string.incomes);
 
     }
 
@@ -62,4 +81,8 @@ public class MainActivity extends AppCompatActivity {
             return 2;
         }
     }
+*/
+
+
+
 }

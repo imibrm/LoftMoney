@@ -18,7 +18,7 @@
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/textColor"
         android:textSize="20sp"
-        tools:text ="Телевизор"/>
+        tools:text ="Автомобиль"/>
 
     <TextView
         android:id="@+id/tv_price_expenses"
@@ -30,6 +30,6 @@
         android:gravity="right"
         android:textColor="@color/priceColor"
         android:textSize="20sp"
-        tools:text ="25000"/>
+        tools:text ="200000"/>
 
 </LinearLayout>

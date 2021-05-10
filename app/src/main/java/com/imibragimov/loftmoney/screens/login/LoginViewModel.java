@@ -4,7 +4,6 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.imibragimov.loftmoney.remote.AuthApi;
-import com.imibragimov.loftmoney.remote.AuthResponse;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;

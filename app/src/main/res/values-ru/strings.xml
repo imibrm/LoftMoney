@@ -6,14 +6,21 @@
     <string name="price_hint">Цена</string>
     <string name="add_button">Добавить</string>
     <string name="expenses">Расходы</string>
-    <string name="income">Доходы</string>
+    <string name="incomes">Доходы</string>
     <string name="balance">Баланс</string>/>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="fill_fields">"Please fill all fields "</string>
-    <string name="success_added">Income added successfully</string>
-    <string name="connection_lost">Sorry, we can"'"t load money list.</string>
-    <string name="activity_main_toolbar_title">Учет бюджета</string>/>
-    <string name="action_login">ВОЙТИ</string>/>
+    <string name="toolbar_title">Учет бюджета</string>
+    <string name="selected">Выбрано: </string>/>
+    <string name="balance_finance_title">Доступные финансы</string>
+
+    <string name="fill_fields">Заполните все поля</string>
+    <string name="success_added">Успешно добавлено</string>
+    <string name="connection_lost">К сожалению, добавление не получилось</string>
+    <string name="action_login">Войти</string>/>
+
+    <string name="delete_items_title">Вы уверены?</string>
+    <string name="delete_items_message">Вы точно хотите удалить выбранные расходы?</string>
+    <string name="action_no">Нет</string>
+    <string name="action_yes">Да</string>
 
     <string name="client_ID">199081525227-3vkoa26c0t876qnb5s0a9d03bv978d0o.apps.googleusercontent.com</string>
     <string name="client_secret">qBY_W_C_Yj2ptzqwZx9CYde4</string>

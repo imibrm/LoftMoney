@@ -15,7 +15,6 @@ import androidx.lifecycle.ViewModelProvider;
 import com.imibragimov.loftmoney.LoftApp;
 import com.imibragimov.loftmoney.R;
 import com.imibragimov.loftmoney.screens.main.MainActivity;
-
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;

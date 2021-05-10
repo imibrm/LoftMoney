@@ -1,5 +1,4 @@
 package com.imibragimov.loftmoney;
-
 import android.app.Application;
 
 import com.imibragimov.loftmoney.remote.AuthApi;
