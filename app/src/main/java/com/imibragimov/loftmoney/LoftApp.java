@@ -1,10 +1,8 @@
 package com.imibragimov.loftmoney;
 
 import android.app.Application;
-
 import com.imibragimov.loftmoney.remote.AuthApi;
 import com.imibragimov.loftmoney.remote.MoneyApi;
-
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -15,13 +13,11 @@ public class LoftApp extends Application {
 
     public MoneyApi moneyApi;
     public AuthApi authApi;
-
     public static String AUTH_KEY = "authKey";
 
     @Override
     public void onCreate() {
         super.onCreate();
-
         configureRetrofit();
     }
 
@@ -42,6 +38,9 @@ public class LoftApp extends Application {
 
         moneyApi = retrofit.create(MoneyApi.class);
         authApi = retrofit.create(AuthApi.class);
+    }
 
+    public MoneyApi getMoneyApi() {
+        return moneyApi;
     }
 }

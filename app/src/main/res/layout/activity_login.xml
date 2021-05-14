@@ -14,6 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_enter_view"
         android:layout_width="170dp"
@@ -21,9 +22,10 @@
         app:layout_constraintTop_toBottomOf="@+id/splash_log_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:drawableStart="@drawable/ic_google"
+        android:drawableLeft="@drawable/ic_google"
+        android:drawablePadding="20dp"
         android:gravity="start|center_vertical"
-        android:paddingStart="55dp"
+        android:paddingStart="25dp"
         android:textSize="14dp"
         android:fontFamily="sans-serif-medium"
         android:textAllCaps="false"
