@@ -124,7 +124,7 @@ public class BudgetFragment extends Fragment implements BudgetEditListener {
         super.onResume();
         onLoadData();
         //******************************
-        new BalanceFragment().loadBalance(); //TODO
+        //new BalanceFragment().loadBalance(); //TODO
         //******************************
     }
 

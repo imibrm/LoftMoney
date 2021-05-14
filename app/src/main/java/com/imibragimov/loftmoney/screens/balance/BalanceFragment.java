@@ -66,6 +66,11 @@ public class BalanceFragment extends Fragment {
         super.onDestroy();
     }
 
+    public void onResume() {
+        super.onResume();
+        loadBalance();
+    }
+
     public void loadBalance() {
         String authToken = getActivity().getSharedPreferences(getString(R.string.app_name), 0).getString(LoftApp.AUTH_KEY, "");
         Disposable disposable = ((LoftApp) getActivity().getApplication()).getMoneyApi().getBalance(authToken)

@@ -37,6 +37,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"
                     android:text="@string/toolbar_title"
+                    android:paddingLeft="20dp"
                     android:textColor="@android:color/white"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
