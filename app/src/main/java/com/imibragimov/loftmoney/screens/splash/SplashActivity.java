@@ -1,5 +1,4 @@
 package com.imibragimov.loftmoney.screens.splash;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;

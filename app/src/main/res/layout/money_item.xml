@@ -30,6 +30,6 @@
         android:gravity="right"
         android:textColor="@color/priceColor"
         android:textSize="20sp"
-        tools:text ="25000"/>
+        tools:text ="30000"/>
 
 </LinearLayout>

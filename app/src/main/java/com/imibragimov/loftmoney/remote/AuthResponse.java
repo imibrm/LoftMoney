@@ -25,4 +25,16 @@ public class AuthResponse {
     public String getStatus() {
         return status;
     }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setAuthToken(String authToken) {
+        this.authToken = authToken;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
