@@ -6,8 +6,8 @@
     <color name="expenseColor">#4A90E2</color>
     <color name="addItemColor">#FF9E57</color>
     <color name="textColor">#666664</color>
-    <color name="priceColor">#4a90e2</color>
-    <color name="priceColor_2">#7ed321</color>
+    <color name="priceColor">#22446C</color>
+    <color name="priceColor_2">#365A0E</color>
     <color name="btnAddTrueIncome">#7ed321</color>
     <color name="btnAddTrueExpense">#4a90e2</color>
     <color name="btnAddFalse">#eaeaea</color>

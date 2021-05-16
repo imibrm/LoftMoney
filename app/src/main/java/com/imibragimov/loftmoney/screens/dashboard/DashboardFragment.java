@@ -75,10 +75,7 @@ public class DashboardFragment extends Fragment implements EditModeListener {
                             public void onClick(DialogInterface dialog, int which) { clearSelectedItems(); }
                         })
                         .show();
-                //******************************
-                //new BalanceFragment().loadBalance();
-                //******************************
-            }
+                }
         });
 
         viewPager = view.findViewById(R.id.view_pager);
@@ -112,7 +109,6 @@ public class DashboardFragment extends Fragment implements EditModeListener {
         tabView.setBackgroundColor(ContextCompat.getColor(getContext(), status ? R.color.selectionColorPrimary : R.color.colorPrimary));
 
         Window window = getActivity().getWindow();
-
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(ContextCompat.getColor(getActivity(), status ? R.color.selectionColorPrimary : R.color.colorPrimary));

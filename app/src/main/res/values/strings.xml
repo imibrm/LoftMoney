@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LoftMoney</string>
+
     <string name="name_hint">Name</string>
     <string name="price_hint">Price</string>
     <string name="add_button">Add</string>
@@ -21,6 +21,6 @@
 
     <string name="price_with_currency">%1$s $</string>
 
-    <string name="client_ID">199081525227-6in7jndouqlu86i8iok46s3arg68qv20.apps.googleusercontent.com</string>
-    <string name="client_secret">gLLXNZQywgJEW0c4ZldeX-Zy</string>
+    <string name="client_ID">199081525227-eo87vrfk1mjql1e4pb64h7jkiq3dm8da.apps.googleusercontent.com</string>
+    <string name="client_secret">YObTjOXvxqWrXXunP0eMNfzu</string>
 </resources>

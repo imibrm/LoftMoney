@@ -61,8 +61,9 @@ public class BudgetViewModel extends ViewModel {
                     }
 
                     moneyItemsList.postValue(moneyItemModels);
+                },
 
-                }, throwable -> {
+                throwable -> {
                     messageString.postValue(throwable.getLocalizedMessage());
                 }));
     }
@@ -91,9 +92,5 @@ public class BudgetViewModel extends ViewModel {
                         messageString.postValue(throwable.getLocalizedMessage());
                     }));
         }
-        //*****************************************
-        //(new BalanceFragment()).loadBalance();
-        //*****************************************
     }
-
 }

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:id="@+id/swipe_refresh_layout_balance"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -27,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
-            android:text="67000₽"
+            android:text="65000 ₽"
             android:textColor="@color/addItemColor"
             android:textSize="48sp"
             app:layout_constraintStart_toStartOf="@id/txtBalanceFinance"
@@ -61,14 +64,14 @@
                 android:fontFamily="sans-serif-light"
                 android:text="@string/expense"
                 android:textColor="@color/textColor"
-                android:textSize="10sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/txtExpenseValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="5400₽"
+                android:text="5000 ₽"
                 android:textColor="@color/priceColor"
                 android:textSize="24sp" />
 
@@ -94,14 +97,14 @@
                 android:fontFamily="sans-serif-light"
                 android:text="@string/income"
                 android:textColor="@color/textColor"
-                android:textSize="10sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/txtIncomeValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="74000₽"
+                android:text="70000 ₽"
                 android:textColor="@color/priceColor_2"
                 android:textSize="24sp" />
 
@@ -115,14 +118,20 @@
             app:layout_constraintTop_toBottomOf="@id/llIncomes" />
 
         <com.imibragimov.loftmoney.screens.balance.BalanceView
+
             android:id="@+id/balanceView"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_marginTop="36dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dividerData" />
+            app:layout_constraintTop_toBottomOf="@id/dividerData"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+<!--app:colorExpenses="@color/priceColor"
+    app:colorIncomes="@color/priceColor_2" -->
+

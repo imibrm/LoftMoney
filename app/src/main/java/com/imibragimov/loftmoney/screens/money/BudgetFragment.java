@@ -123,10 +123,7 @@ public class BudgetFragment extends Fragment implements BudgetEditListener {
     public void onResume() {
         super.onResume();
         onLoadData();
-        //******************************
-        //new BalanceFragment().loadBalance(); //TODO
-        //******************************
-    }
+     }
 
     private void onLoadData() {
         budgetViewModel.loadIncomes(((LoftApp) getActivity().getApplication()).moneyApi, currentPosition, getActivity().getSharedPreferences(getString(R.string.app_name), 0));

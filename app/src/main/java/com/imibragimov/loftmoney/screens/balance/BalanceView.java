@@ -1,6 +1,7 @@
 package com.imibragimov.loftmoney.screens.balance;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
@@ -10,6 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 import com.imibragimov.loftmoney.R;
+
+import java.lang.reflect.Array;
 
 public class BalanceView extends View {
 
@@ -21,22 +24,22 @@ public class BalanceView extends View {
 
     public BalanceView(Context context) {
         super(context);
-        init();
+        init(null);
     }
 
     public BalanceView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(attrs);
     }
 
     public BalanceView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
+        init(attrs);
     }
 
     public BalanceView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init();
+        init(attrs);
     }
 
     public void update(float expenses, float incomes) {
@@ -46,10 +49,15 @@ public class BalanceView extends View {
         invalidate();
     }
 
-    private void init() {
-        expensePaint.setColor(ContextCompat.getColor(getContext(), R.color.priceColor));
-        incomePaint.setColor(ContextCompat.getColor(getContext(), R.color.priceColor_2));
+    private void init(AttributeSet attrs) {
+
+        final TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.BalanceView);
+        expensePaint.setColor(a.getColor(R.styleable.BalanceView_ColorExpenses, getResources().getColor(R.color.priceColor)));
+        incomePaint.setColor(a.getColor(R.styleable.BalanceView_ColorIncomes, getResources().getColor(R.color.priceColor_2)));
+        a.recycle();
     }
+
+
 
     @Override
     protected void onDraw(Canvas canvas) {

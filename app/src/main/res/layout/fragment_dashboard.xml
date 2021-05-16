@@ -58,7 +58,8 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@mipmap/app_background">
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_view"

@@ -1,7 +1,9 @@
 package com.imibragimov.loftmoney.screens.balance;
 
 import android.content.SharedPreferences;
+import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +13,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.imibragimov.loftmoney.LoftApp;
@@ -20,6 +24,8 @@ import com.imibragimov.loftmoney.remote.BalanceResponse;
 import com.imibragimov.loftmoney.remote.MoneyApi;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -34,6 +40,7 @@ public class BalanceFragment extends Fragment {
     private BalanceView balanceView;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     private SwipeRefreshLayout swipeRefreshLayout;
+    final String LOG_TAG = "myLogs";
 
     @Nullable
     @Override
@@ -54,9 +61,11 @@ public class BalanceFragment extends Fragment {
             @Override
             public void onRefresh() {
                 loadBalance();
+
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
+
         loadBalance();
     }
 
@@ -66,6 +75,7 @@ public class BalanceFragment extends Fragment {
         super.onDestroy();
     }
 
+    @Override
     public void onResume() {
         super.onResume();
         loadBalance();

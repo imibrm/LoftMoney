@@ -121,8 +121,8 @@ public class AddItemActivity extends AppCompatActivity {
                     .subscribe(() -> {
                         Toast.makeText(getApplicationContext(), getString(R.string.success_added), Toast.LENGTH_LONG).show();
                         finish();
-
-                    }, throwable -> Toast.makeText(getApplicationContext(), throwable.getLocalizedMessage(), Toast.LENGTH_LONG).show()));
+                    },
+                    throwable -> Toast.makeText(getApplicationContext(), throwable.getLocalizedMessage(), Toast.LENGTH_LONG).show()));
             }
     }
 }
